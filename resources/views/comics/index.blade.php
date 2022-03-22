@@ -19,7 +19,7 @@
                            <p class="card-text"><strong>Data di uscita:</strong> {{ $comic->sale_date }}</p>
                            <p class="card-text text-capitalize"><small class="text-muted"><strong>Tipo:</strong>
                                  {{ $comic->type }}</small></p>
-                           <a href="#">Scopri di più</a>
+                           <a href="{{ route('comics.show', $comic->id) }}" class="btn btn">Scopri di più</a>
                         </div>
                      </div>
                   </div>
