@@ -26,14 +26,35 @@
                      <input type="url" id="img" name="thumb">
                   </div>
                   {{-- PREZZO --}}
-                  <div class="col-6">
+                  <div class="col-2">
                      <label for="price">Prezzo</label>
                      <input type="number" id="price" name="price">
                   </div>
                   {{-- DATA --}}
-                  <div class="col-6">
+                  <div class="col-2">
                      <label for="sale_date">Data di uscita</label>
                      <input type="date" id="sale_date" name="sale_date">
+                  </div>
+                  {{-- TIPO --}}
+                  <div class="col-2">
+                     <label for="type">Tipo di fumetto</label>
+                     <select name="type" id="type">
+                        @foreach ($comic_type as $key => $type)
+                           <option class="text-uppercase">{{ $key }}</option>
+                        @endforeach
+                     </select>
+                  </div>
+                  {{-- DESCRIPTION --}}
+                  <div class="col-6">
+                     <label for="sale_date">Data di uscita</label>
+                     <textarea name="sale_date" id="sale_date" rows="10"></textarea>
+                  </div>
+                  {{-- DESCRIPTION --}}
+                  <div class="col-6">
+                     <div class="h-100 w-100 d-flex justify-content-end align-items-end">
+                        <button type="submit" class="btn btn-primary mx-3">Invia</button>
+                        <button type="reset" class="btn btn-secondary">Pulisci i campi</button>
+                     </div>
                   </div>
                </div>
             </form>

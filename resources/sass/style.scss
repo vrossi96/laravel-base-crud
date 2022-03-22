@@ -37,16 +37,13 @@ header {
 
 // FORM
 form {
-   .col-6 {
-      label, input{
+   .col-6, .col-2 {
+      label, input, select, textarea{
          display: block;
          width: 100%;
          color: $light-gray;
       }
-      label {
-         
-      }
-      input {
+      input, select, textarea {
          background-color: $bg-darker;
          border-radius: 5px;
       }
