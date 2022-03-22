@@ -46,7 +46,7 @@
                   </div>
                   {{-- DESCRIPTION --}}
                   <div class="col-6">
-                     <label for="description">Data di uscita</label>
+                     <label for="description">Descrizione</label>
                      <textarea name="description" id="description" rows="10"></textarea>
                   </div>
                   {{-- DESCRIPTION --}}
