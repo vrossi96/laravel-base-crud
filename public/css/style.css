@@ -28,3 +28,13 @@ header {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
+form .col-6 label, form .col-6 input {
+  display: block;
+  width: 100%;
+  color: #d5d5d5;
+}
+form .col-6 input {
+  background-color: #1f1f1f;
+  border-radius: 5px;
+}

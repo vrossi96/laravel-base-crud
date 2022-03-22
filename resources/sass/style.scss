@@ -4,7 +4,7 @@ body {
    background-color: $bg-dark;
 }
 
-// Header
+// HEADER
 header {
    height: 90px;
 }
@@ -32,5 +32,23 @@ header {
       height: 250px;
       background-position: center top;
       background-repeat: no-repeat;
+   }
+}
+
+// FORM
+form {
+   .col-6 {
+      label, input{
+         display: block;
+         width: 100%;
+         color: $light-gray;
+      }
+      label {
+         
+      }
+      input {
+         background-color: $bg-darker;
+         border-radius: 5px;
+      }
    }
 }
