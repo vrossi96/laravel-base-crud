@@ -2,7 +2,18 @@ body {
    background-color: #292929;
 }
 
+// CARDS
 .card {
    background-color: #1f1f1f;
    color: #d5d5d5;
+   
+   a {
+      display: inline-block;
+      color: #d5d5d5;
+      background-color: #b64fc8;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+   }
 }
