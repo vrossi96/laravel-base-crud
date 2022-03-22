@@ -6,7 +6,7 @@ body {
 .card {
    background-color: #1f1f1f;
    color: #d5d5d5;
-   
+
    a {
       display: inline-block;
       color: #d5d5d5;
@@ -15,5 +15,12 @@ body {
       font-weight: bold;
       padding: 5px 10px;
       border-radius: 5px;
+   }
+
+   .show-card {
+      width: auto;
+      height: 250px;
+      background-position: center top;
+      background-repeat: no-repeat;
    }
 }
