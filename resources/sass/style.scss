@@ -1,5 +1,7 @@
+@import 'vars';
+
 body {
-   background-color: #292929;
+   background-color: $bg-dark;
 }
 
 // Header
@@ -9,19 +11,19 @@ header {
 
 // CARDS
 .card {
-   background-color: #1f1f1f;
-   color: #d5d5d5;
+   background-color: $bg-darker;
+   color: $light-gray;
 
    a {
       display: inline-block;
-      color: #d5d5d5;
-      background-color: #b64fc8;
+      color: $light-gray;
+      background-color: $bg-darker-p;
       text-decoration: none;
       font-weight: bold;
       padding: 5px 10px;
       border-radius: 5px;
       &:hover {
-         background-color: #ffb2ff;
+         background-color: $bg-dark-p;
       }
    }
 
