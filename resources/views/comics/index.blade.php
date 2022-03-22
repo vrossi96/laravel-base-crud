@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>COMICS INDEX</title>
-</head>
+@section('page-title', 'Comics')
 
-<body>
+@section('main')
+   <div class="container">
+      <div class="row">
 
-</body>
-
-</html>
+      </div>
+   </div>
+@endsection
