@@ -7,6 +7,10 @@ body {
 // HEADER
 header {
    height: 90px;
+
+   .active {
+      border-bottom: 3px solid #fff;
+   }
 }
 
 // CARDS

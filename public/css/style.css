@@ -5,6 +5,9 @@ body {
 header {
   height: 90px;
 }
+header .active {
+  border-bottom: 3px solid #fff;
+}
 
 .card {
   position: relative;
