@@ -33,7 +33,7 @@
                   {{-- DATA --}}
                   <div class="col-2">
                      <label for="sale_date">Data di uscita</label>
-                     <input type="date" id="sale_date" name="sale_date">
+                     <input type="text" placeholder="YYYY/MM/DD" id="sale_date" name="sale_date">
                   </div>
                   {{-- TIPO --}}
                   <div class="col-2">
