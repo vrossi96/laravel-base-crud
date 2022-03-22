@@ -16,7 +16,7 @@
                   <p class="card-text">{{ $comic->description }}</p>
                   <p class="card-text text-capitalize"><small class="text-muted"><strong>Tipo:</strong>
                         {{ $comic->type }}</small></p>
-                  <a href="{{ route('comics.index') }}" class="btn btn">Torna indietro</a>
+                  <a href="{{ route('comics.index') }}" class="btn details">Torna indietro</a>
                </div>
                {{-- DELETE BTN --}}
                <a class="dlt-comic" href="{{ route('comics.destroy', $comic->id) }}">
