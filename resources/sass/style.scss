@@ -11,18 +11,35 @@ header {
 
 // CARDS
 .card {
+   position: relative;
    background-color: $bg-darker;
    color: $light-gray;
 
    a {
-      display: inline-block;
-      color: $light-gray;
-      background-color: $bg-darker-p;
       text-decoration: none;
-      font-weight: bold;
+      display: inline-block;
       padding: 5px 10px;
       border-radius: 5px;
+   }
+
+   .dlt-comic {
+      position: absolute;
+      color: $light-gray;
+      background-color: rgb(172, 72, 72);
+      top: 0;
+      right: 0;
       &:hover {
+         color: #fff;
+         background-color: red;
+      }
+   }
+
+   .details {
+      color: $light-gray;
+      background-color: $bg-darker-p;
+      font-weight: bold;
+      &:hover {
+         color: #000;
          background-color: $bg-dark-p;
       }
    }
