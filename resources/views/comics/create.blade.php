@@ -33,7 +33,7 @@
                   {{-- DATA --}}
                   <div class="col-2">
                      <label for="sale_date">Data di uscita</label>
-                     <input type="text" placeholder="YYYY/MM/DD" id="sale_date" name="sale_date">
+                     <input type="date" id="sale_date" name="sale_date">
                   </div>
                   {{-- TIPO --}}
                   <div class="col-2">
@@ -46,8 +46,8 @@
                   </div>
                   {{-- DESCRIPTION --}}
                   <div class="col-6">
-                     <label for="sale_date">Data di uscita</label>
-                     <textarea name="sale_date" id="sale_date" rows="10"></textarea>
+                     <label for="description">Data di uscita</label>
+                     <textarea name="description" id="description" rows="10"></textarea>
                   </div>
                   {{-- DESCRIPTION --}}
                   <div class="col-6">
