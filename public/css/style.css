@@ -7,19 +7,34 @@ header {
 }
 
 .card {
+  position: relative;
   background-color: #1f1f1f;
   color: #d5d5d5;
 }
 .card a {
-  display: inline-block;
-  color: #d5d5d5;
-  background-color: #b64fc8;
   text-decoration: none;
-  font-weight: bold;
+  display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
 }
-.card a:hover {
+.card .dlt-comic {
+  position: absolute;
+  color: #d5d5d5;
+  background-color: #ac4848;
+  top: 0;
+  right: 0;
+}
+.card .dlt-comic:hover {
+  color: #fff;
+  background-color: red;
+}
+.card .details {
+  color: #d5d5d5;
+  background-color: #b64fc8;
+  font-weight: bold;
+}
+.card .details:hover {
+  color: #000;
   background-color: #ffb2ff;
 }
 .card .show-card {
