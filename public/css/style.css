@@ -2,6 +2,10 @@ body {
   background-color: #292929;
 }
 
+header {
+  height: 90px;
+}
+
 .card {
   background-color: #1f1f1f;
   color: #d5d5d5;
@@ -14,6 +18,9 @@ body {
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
+}
+.card a:hover {
+  background-color: #ffb2ff;
 }
 .card .show-card {
   width: auto;

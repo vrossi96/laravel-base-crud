@@ -11,6 +11,8 @@
 </head>
 
 <body>
+   @include('includes.header')
+
    @yield('main')
 </body>
 
