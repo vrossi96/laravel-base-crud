@@ -26,15 +26,26 @@ header {
       border-radius: 5px;
    }
 
-   .dlt-comic {
+   .edit-dlt-comic {
       position: absolute;
-      color: $light-gray;
-      background-color: rgb(172, 72, 72);
       top: 0;
       right: 0;
-      &:hover {
-         color: #fff;
-         background-color: red;
+      .edit-comic {
+         border-radius: 0 5px 0 0;
+         color: #000;
+         background-color: rgb(165, 165, 37);
+         &:hover {
+            background-color: rgb(204, 204, 40);
+         }
+      }
+      .dlt-comic {
+         border-radius: 0 0 0 5px;
+         color: $light-gray;
+         background-color: rgb(172, 72, 72);
+         &:hover {
+            color: #fff;
+            background-color: rgb(226, 13, 13);
+         }
       }
    }
 

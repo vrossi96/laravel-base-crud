@@ -27,9 +27,12 @@
                      </div>
                   </div>
                   {{-- DELETE BTN --}}
-                  <a class="dlt-comic" href="{{ route('comics.destroy', $comic->id) }}">
-                     <i class="fa-solid fa-trash-can"></i>
-                  </a>
+                  <div class="edit-dlt-comic d-flex flex-column">
+                     <a class="edit-comic" href="#"><i class="fas fa-edit"></i></a>
+                     <a class="dlt-comic" href="{{ route('comics.destroy', $comic->id) }}">
+                        <i class="fa-solid fa-trash-can"></i>
+                     </a>
+                  </div>
                </div>
             </div>
          @empty
