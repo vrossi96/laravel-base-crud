@@ -6,7 +6,7 @@
    <div class="container">
       <div class="row">
          <div class="col-12">
-            {{-- FORM PER CHIEDERE INFO PER IL NUOVO FUMETTO, METODO POST PER comics.store --}}
+            {{-- FORM PER CHIEDERE INFO PER MODIFICA FUMETTO, METODO PUT PER comics.update --}}
             <form class="form-comic-info" method="POST" action="{{ route('comics.update', $comic->id) }}">
                @method('PUT')
                @csrf
@@ -61,16 +61,7 @@
                      </div>
                   </div>
                   {{-- CONFIRM - RESET BUTTON --}}
-                  <div class="col-2 mt-4">
-                     <div class="h-100 w-100 d-flex justify-content-end align-items-start">
-                        <button type="submit" class="btn btn-success mx-1">
-                           <i class="fas fa-check"></i>
-                        </button>
-                        <button type="reset" class="btn btn-secondary">
-                           <i class="fas fa-history"></i>
-                        </button>
-                     </div>
-                  </div>
+                  @include('includes/comics/conf-reset')
                </div>
             </form>
          </div>
@@ -80,16 +71,5 @@
 
 
 @section('custom-script')
-   <script>
-      const placeholder = "https://m.media-amazon.com/images/I/31YAbWpcjYL._AC_.jpg";
-      const previewImg = document.getElementById('preview-img');
-      const imgInput = document.getElementById('img');
-
-      imgInput.addEventListener('change', function() {
-         // PRENDE LA VALUE DELL'EVENTO IN CUI CI SI TROVA
-         const url = this.value;
-         if (url) previewImg.setAttribute('src', url);
-         else previewImg.setAttribute('src', placeholder);
-      });
-   </script>
+   <script src="{{ asset('js/script.js') }}"></script>
 @endsection
