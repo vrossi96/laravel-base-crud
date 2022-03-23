@@ -55,8 +55,12 @@
                   {{-- CONFIRM - RESET BUTTON --}}
                   <div class="col-6">
                      <div class="h-100 w-100 d-flex justify-content-end align-items-end">
-                        <button type="submit" class="btn btn-primary mx-3">Conferma modifiche</button>
-                        <button type="reset" class="btn btn-secondary">Reimposta</button>
+                        <button type="submit" class="btn btn-success mx-1">
+                           <i class="fas fa-check"></i>
+                        </button>
+                        <button type="reset" class="btn btn-secondary">
+                           <i class="fas fa-history"></i>
+                        </button>
                      </div>
                   </div>
                </div>

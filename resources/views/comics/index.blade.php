@@ -26,12 +26,13 @@
                         </div>
                      </div>
                   </div>
-                  {{-- DELETE BTN --}}
+                  {{-- DELETE - EDIT BTN --}}
                   <div class="edit-dlt-comic d-flex flex-column">
+                     {{-- EDIT --}}
                      <a class="edit-comic" href="{{ route('comics.edit', $comic->id) }}"><i
                            class="fas fa-edit"></i>
                      </a>
-
+                     {{-- DELETE --}}
                      <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
@@ -39,7 +40,6 @@
                            <i class="fa-solid fa-trash-can"></i>
                         </button>
                      </form>
-
                   </div>
                </div>
             </div>

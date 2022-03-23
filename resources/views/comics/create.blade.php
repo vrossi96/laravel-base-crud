@@ -28,7 +28,7 @@
                   {{-- PREZZO --}}
                   <div class="col-2">
                      <label for="price">Prezzo</label>
-                     <input type="number" id="price" name="price">
+                     <input step=".01" type="number" id="price" name="price">
                   </div>
                   {{-- DATA --}}
                   <div class="col-2">
@@ -52,8 +52,12 @@
                   {{-- CONFIRM - RESET BUTTON --}}
                   <div class="col-6">
                      <div class="h-100 w-100 d-flex justify-content-end align-items-end">
-                        <button type="submit" class="btn btn-primary mx-3">Invia</button>
-                        <button type="reset" class="btn btn-secondary">Pulisci i campi</button>
+                        <button type="submit" class="btn btn-success mx-1">
+                           <i class="fas fa-check"></i>
+                        </button>
+                        <button type="reset" class="btn btn-secondary">
+                           <i class="fas fa-history"></i>
+                        </button>
                      </div>
                   </div>
                </div>
