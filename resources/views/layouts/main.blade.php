@@ -15,6 +15,17 @@
 
 <body>
    @include('includes.header')
+   <div class="container">
+      <div class="row">
+         @if ($session('message'))
+            <div class="col-12">
+               <div class="alert alert-info">
+                  {{ session('message') }}
+               </div>
+            </div>
+         @endif
+      </div>
+   </div>
 
    @yield('main')
 
