@@ -8,6 +8,17 @@
 @endif
 @csrf
 <div class="row">
+   @if ($errors->any())
+      <div class="col-12">
+         <div class="alert alert-danger">
+            <ul>
+               @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+               @endforeach
+            </ul>
+         </div>
+      </div>
+   @endif
    {{-- TITOLO --}}
    <div class="col-6">
       <label for="title">Titolo</label>
@@ -53,7 +64,8 @@
    {{-- IMG --}}
    <div class="col-4 mt-4">
       <div class="w-100 d-flex justify-content-center">
-         <img id="preview-img" src="{{ $comic->thumb ?? 'https://m.media-amazon.com/images/I/31YAbWpcjYL._AC_.jpg' }}"
+         <img id="preview-img"
+            src="{{ $comic->thumb ?? 'https://m.media-amazon.com/images/I/31YAbWpcjYL._AC_.jpg' }}"
             alt="Comic Preview">
       </div>
    </div>

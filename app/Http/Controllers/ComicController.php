@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Validation\Rule;
 use App\Models\Comic;
 
 class ComicController extends Controller
@@ -38,6 +39,21 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => ['required', 'string', 'unique:comics', 'min:5', 'max:75'],
+            'thumb' => 'url',
+            'price' => ['numeric', 'min:0', 'max:500'],
+            'series' => ['required', 'string', 'min:5', 'max:50'],
+            'sale_date' => 'date'
+        ], [
+            'required' => 'Il campo :attribute è obbligatorio',
+            'min' => 'Il campo :attribute richiede almeno 5 caratteri',
+            'url' => 'Per l\'immagine è necessario un url valido',
+            'numeric' => 'Il :attribute deve essere un numero',
+            'price.min' => 'Il :attribute deve essere sopra lo 0',
+            'date' => 'Il campo :attribute deve essere una data',
+        ]);
+
         $data = $request->all();
 
         $newComic = new Comic();
