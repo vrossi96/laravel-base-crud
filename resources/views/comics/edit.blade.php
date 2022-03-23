@@ -55,7 +55,9 @@
                   {{-- IMG --}}
                   <div class="col-4 mt-4">
                      <div class="w-100 d-flex justify-content-center">
-                        <img class="preview-img" src="{{ $comic->thumb }}" alt="Comic Preview">
+                        <img id="preview-img"
+                           src="{{ $comic->thumb ?? 'https://m.media-amazon.com/images/I/31YAbWpcjYL._AC_.jpg' }}"
+                           alt="Comic Preview">
                      </div>
                   </div>
                   {{-- CONFIRM - RESET BUTTON --}}
@@ -74,4 +76,20 @@
          </div>
       </div>
    </div>
+@endsection
+
+
+@section('custom-script')
+   <script>
+      const placeholder = "https://m.media-amazon.com/images/I/31YAbWpcjYL._AC_.jpg";
+      const previewImg = document.getElementById('preview-img');
+      const imgInput = document.getElementById('img');
+
+      imgInput.addEventListener('change', function() {
+         // PRENDE LA VALUE DELL'EVENTO IN CUI CI SI TROVA
+         const url = this.value;
+         if (url) previewImg.setAttribute('src', url);
+         else previewImg.setAttribute('src', placeholder);
+      });
+   </script>
 @endsection

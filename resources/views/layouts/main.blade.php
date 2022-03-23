@@ -17,6 +17,8 @@
    @include('includes.header')
 
    @yield('main')
+
+   @yield('custom-script')
 </body>
 
 </html>
