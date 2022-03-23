@@ -25,8 +25,9 @@ class ComicController extends Controller
      */
     public function create()
     {
+        $comic = new Comic();
         $comic_type = Comic::get('type')->groupBy('type');
-        return view('comics.create', compact('comic_type'));
+        return view('comics.create', compact('comic_type', 'comic'));
     }
 
     /**
