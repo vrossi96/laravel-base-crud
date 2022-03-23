@@ -32,7 +32,7 @@
                            class="fas fa-edit"></i>
                      </a>
 
-                     <form action="{{ route('comics.destroy', $comic->id) }}" action="POST">
+                     <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn dlt-comic">
