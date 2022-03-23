@@ -49,6 +49,9 @@
       <label for="type">Tipo di fumetto</label>
       <select name="type" id="type">
          @foreach ($comic_type as $key => $t)
+            <option class="text-uppercase">
+               ---
+            </option>
             {{-- CONTROLLARE OLD ALLA VERIFICA --}}
             <option @if (old('type', $comic->type) === $key) selected @endif class="text-uppercase">
                {{ $key }}

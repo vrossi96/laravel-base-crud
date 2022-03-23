@@ -33,7 +33,8 @@
                            class="fas fa-edit"></i>
                      </a>
                      {{-- DELETE --}}
-                     <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                     <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form"
+                        data-name="{{ $comic->title }}">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn dlt-comic">
@@ -48,4 +49,8 @@
          @endforelse
       </div>
    </div>
+@endsection
+
+@section('custom-script')
+   <script src="{{ asset('js/delete.js') }}"></script>
 @endsection

@@ -17,7 +17,7 @@
    @include('includes.header')
    <div class="container">
       <div class="row">
-         @if ($session('message'))
+         @if (session('message'))
             <div class="col-12">
                <div class="alert alert-info">
                   {{ session('message') }}
