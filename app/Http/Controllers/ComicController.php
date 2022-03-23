@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Validation\Rule;
 use App\Models\Comic;
 
 class ComicController extends Controller
@@ -44,10 +44,12 @@ class ComicController extends Controller
             'thumb' => 'url',
             'price' => ['numeric', 'min:0', 'max:500'],
             'series' => ['required', 'string', 'min:5', 'max:50'],
-            'sale_date' => 'date'
+            'sale_date' => 'date',
+            'type' => [Rule::in(['comic book', 'graphic novel']),],
         ], [
             'required' => 'Il campo :attribute è obbligatorio',
             'min' => 'Il campo :attribute richiede almeno 5 caratteri',
+            'title.unique' => "Il titolo $request->title esiste già",
             'url' => 'Per l\'immagine è necessario un url valido',
             'numeric' => 'Il :attribute deve essere un numero',
             'price.min' => 'Il :attribute deve essere sopra lo 0',
@@ -98,6 +100,22 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate([
+            'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id), 'min:5', 'max:75'],
+            'thumb' => 'url',
+            'price' => ['numeric', 'min:0', 'max:500'],
+            'series' => ['required', 'string', 'min:5', 'max:50'],
+            'sale_date' => 'date',
+            'type' => [Rule::in(['comic book', 'graphic novel']),],
+        ], [
+            'required' => 'Il campo :attribute è obbligatorio',
+            'min' => 'Il campo :attribute richiede almeno 5 caratteri',
+            'url' => 'Per l\'immagine è necessario un url valido',
+            'numeric' => 'Il :attribute deve essere un numero',
+            'price.min' => 'Il :attribute deve essere sopra lo 0',
+            'date' => 'Il campo :attribute deve essere una data',
+        ]);
+
         $data = $request->all();
 
         $comic->update($data);
