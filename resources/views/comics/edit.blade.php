@@ -7,7 +7,7 @@
       <div class="row">
          <div class="col-12">
             {{-- FORM PER CHIEDERE INFO PER IL NUOVO FUMETTO, METODO POST PER comics.store --}}
-            <form method="POST" action="{{ route('comics.update', $comic->id) }}">
+            <form class="form-comic-info" method="POST" action="{{ route('comics.update', $comic->id) }}">
                @method('PUT')
                @csrf
                <div class="row">
@@ -52,9 +52,15 @@
                      <label for="description">Descrizione</label>
                      <textarea name="description" id="description" rows="10">{{ $comic->description }}</textarea>
                   </div>
+                  {{-- IMG --}}
+                  <div class="col-4 mt-4">
+                     <div class="w-100 d-flex justify-content-center">
+                        <img class="preview-img" src="{{ $comic->thumb }}" alt="Comic Preview">
+                     </div>
+                  </div>
                   {{-- CONFIRM - RESET BUTTON --}}
-                  <div class="col-6">
-                     <div class="h-100 w-100 d-flex justify-content-end align-items-end">
+                  <div class="col-2 mt-4">
+                     <div class="h-100 w-100 d-flex justify-content-end align-items-start">
                         <button type="submit" class="btn btn-success mx-1">
                            <i class="fas fa-check"></i>
                         </button>

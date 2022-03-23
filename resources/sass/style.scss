@@ -68,7 +68,7 @@ header {
 }
 
 // FORM
-form {
+.form-comic-info {
    .col-6, .col-2 {
       label, input, select, textarea{
          display: block;
@@ -79,5 +79,8 @@ form {
          background-color: $bg-darker;
          border-radius: 5px;
       }
+   }
+   .preview-img {
+      height: 291px;
    }
 }

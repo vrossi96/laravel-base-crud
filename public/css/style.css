@@ -58,12 +58,15 @@ header .active {
   background-repeat: no-repeat;
 }
 
-form .col-6 label, form .col-6 input, form .col-6 select, form .col-6 textarea, form .col-2 label, form .col-2 input, form .col-2 select, form .col-2 textarea {
+.form-comic-info .col-6 label, .form-comic-info .col-6 input, .form-comic-info .col-6 select, .form-comic-info .col-6 textarea, .form-comic-info .col-2 label, .form-comic-info .col-2 input, .form-comic-info .col-2 select, .form-comic-info .col-2 textarea {
   display: block;
   width: 100%;
   color: #d5d5d5;
 }
-form .col-6 input, form .col-6 select, form .col-6 textarea, form .col-2 input, form .col-2 select, form .col-2 textarea {
+.form-comic-info .col-6 input, .form-comic-info .col-6 select, .form-comic-info .col-6 textarea, .form-comic-info .col-2 input, .form-comic-info .col-2 select, .form-comic-info .col-2 textarea {
   background-color: #1f1f1f;
   border-radius: 5px;
+}
+.form-comic-info .preview-img {
+  height: 291px;
 }
