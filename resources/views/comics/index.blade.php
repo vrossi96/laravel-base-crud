@@ -29,10 +29,17 @@
                   {{-- DELETE BTN --}}
                   <div class="edit-dlt-comic d-flex flex-column">
                      <a class="edit-comic" href="{{ route('comics.edit', $comic->id) }}"><i
-                           class="fas fa-edit"></i></a>
-                     <a class="dlt-comic" href="{{ route('comics.destroy', $comic->id) }}">
-                        <i class="fa-solid fa-trash-can"></i>
+                           class="fas fa-edit"></i>
                      </a>
+
+                     <form action="{{ route('comics.destroy', $comic->id) }}" action="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn dlt-comic">
+                           <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                     </form>
+
                   </div>
                </div>
             </div>

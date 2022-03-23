@@ -49,7 +49,7 @@
                      <label for="description">Descrizione</label>
                      <textarea name="description" id="description" rows="10"></textarea>
                   </div>
-                  {{-- DESCRIPTION --}}
+                  {{-- CONFIRM - RESET BUTTON --}}
                   <div class="col-6">
                      <div class="h-100 w-100 d-flex justify-content-end align-items-end">
                         <button type="submit" class="btn btn-primary mx-3">Invia</button>
